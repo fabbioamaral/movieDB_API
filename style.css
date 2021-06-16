@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+#filmesPopulares{
+    margin-top:20px;
+}
+
+#rowFilmesPopulares{
+    margin-top: 20px;
+}
+
+#divBotaoFilmesPopulares{
+    display:flex;
+    justify-content: flex-end;    
+}
+
+@media screen and (max-width:989px) {
+    #divBotaoFilmesPopulares{
+        justify-content: center;    
+    }
+}
+
+#btnCarregarMaisFilmesPopulares{
+    margin-top:20px;
+}
