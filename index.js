@@ -1,6 +1,6 @@
 //Variáveis Globais
 const btnCarregarMaisFilmesPopulares = document.getElementById('btnCarregarMaisFilmesPopulares');
-let filmesDiv = document.getElementById('rowFilmesPopulares');      
+const filmesDiv = document.getElementById('rowFilmesPopulares');      
 let filmeContainerHTML=filmesDiv.innerHTML;
 var controladorFor=0;
 
@@ -31,15 +31,15 @@ function exibirFilmes(filmes){
         filmeContainerHTML='';
         for (let i=0; i<4;i++){
             filmeContainerHTML += `
-            <div class="col-12 col-md-6 col-lg-3 filmesPopularesDivCards">
+            <div class="col-12 col-md-6 col-lg-3 filmesEncontradosDivCards">
                 <div class="card" style="width: 100%;">
                     <img src="https://image.tmdb.org/t/p/w500${filmes[i].backdrop_path}" class="card-img-top" alt="Filme Popular">
-                     <div class="card-body">
+                    <div class="card-body">
                         <h5 class="card-title">${filmes[i].original_title}</h5>
                         <p class="card-text">${filmes[i].overview}</p>
-                        <a href="https://image.tmdb.org/t/p/w500${filmes[i].poster_path}" class="btn btn-dark">Visualizar poster</a>
+                        <a href="https://www.themoviedb.org/movie/${filmes[i].id}" target="_blank" class="btn btn-dark">Ver Detalhes</a>
                     </div>
-                 </div>
+                </div>
             </div>          
             
             `
@@ -50,16 +50,16 @@ function exibirFilmes(filmes){
         controladorFor+=4;
         for (let i=controladorFor; i<controladorFor+4 && i<19;i++){
             filmeContainerHTML += `
-            <div class="col-12 col-md-6 col-lg-3 filmesPopularesDivCards">
+            <div class="col-12 col-md-6 col-lg-3 filmesEncontradosDivCards">
                 <div class="card" style="width: 100%;">
                     <img src="https://image.tmdb.org/t/p/w500${filmes[i].backdrop_path}" class="card-img-top" alt="Filme Popular">
-                     <div class="card-body">
+                    <div class="card-body">
                         <h5 class="card-title">${filmes[i].original_title}</h5>
                         <p class="card-text">${filmes[i].overview}</p>
-                        <a href="https://image.tmdb.org/t/p/w500${filmes[i].poster_path}" class="btn btn-dark">Visualizar poster</a>
+                        <a href="https://www.themoviedb.org/movie/${filmes[i].id}" target="_blank" class="btn btn-dark">Ver Detalhes</a>
                     </div>
-                 </div>
-            </div>            
+                </div>
+            </div>          
             
             `
         }

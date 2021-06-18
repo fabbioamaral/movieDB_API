@@ -28,10 +28,10 @@
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./paginaBusca.html">Página de Pesquisa</a>
+                        <a class="nav-link active" aria-current="page" href="./paginaBusca.html">Página de Pesquisa</a>
                     </li>
                     </ul>
               </div>
@@ -40,37 +40,31 @@
    </header>
 
    <!-- Filmes Populares -->
-   <section id="filmesPopulares">
+   <section id="filmesEncontrados">
        <div class="container">
            <div class="row">
                <div class="col-12">
-                   <h1>Filmes Populares 🔥</h1>
+                   <h1>Buscar Filmes 🔎</h1>
                </div>
            </div>
 
-           <div class="row" id="rowFilmesPopulares"></div>
+           <div class="row" id="rowCampoDeBusca">
+            <div class="input-group mb-3">
+                <input type="text" style="margin-top:20px;" class="form-control" id="inputBusca" placeholder="exemplo: Spider-Man" aria-label="Nome do Filme a Ser Procurado" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" id="btnBuscar" style="margin-top:20px;" type="button" id="button-addon2">Buscar</button>
+              </div>
 
-           <div class="row" id="divBotaoFilmesPopulares">
-            <button type="button" class="btn btn-danger" id="btnCarregarMaisFilmesPopulares" style="width:130px;height:50px">Carregar Mais</button>
            </div>
+
+           <div class="row" id="rowFilmesEncontrados"></div>
+
+
            
         </div>
    </section>
 
-   <footer class="container-fluid footer-area">
-    <div class="row footerRow">
-        <div class="col-12 copyrightDiv">
-            <p>Fábio Amaral - Disciplina de Desenvolvimento de Interfaces Web - <span style="font-weight: bold;">ICEI PUC Minas</span></p>
-        </div>
-
-
-    </div>
-
-
-</footer>
-
    <!-- JavaScript do Projeto --> 
-   <script src="./index.js"></script>
+   <script src="./paginaBusca.js"></script>
 
     <!-- JavaScript do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
