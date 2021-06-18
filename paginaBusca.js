@@ -47,7 +47,7 @@ function buscarFilmes(filmes){
             filmeContainerHTML += `
             <div class="col-12 col-md-6 col-lg-3 filmesEncontradosDivCards">
                 <div class="card" style="width: 100%;">
-                    <img src="https://image.tmdb.org/t/p/w500${filmes[i].backdrop_path}" class="card-img-top" alt="Filme Popular">
+                ${filmes[i].backdrop_path ? `<img src="https://image.tmdb.org/t/p/w500${filmes[i].backdrop_path}" class="card-img-top" alt="Filme Popular">` : ''} 
                     <div class="card-body">
                         <h5 class="card-title">${filmes[i].original_title}</h5>
                         <p class="card-text">${filmes[i].overview}</p>
